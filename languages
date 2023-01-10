@@ -1,0 +1,7 @@
+setxkbmap gb
+setxkbmap ru
+setxkbmap ir
+
+######
+ibus-daemon
+ibus engine libpinyin
