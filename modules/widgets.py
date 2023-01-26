@@ -10,15 +10,17 @@ colors = [
           ["#4f76c7", "#4f76c7"], # color for the 'even widgets'
           ["#e1acff", "#e1acff"], # window name
           ["#ecbbfb", "#ecbbfb"]  # backbround for inactive screens
-] 
+]
 
 
 widget_defaults = dict(
     font='Cantarell',
-    fontsize=12,
+    fontsize=16,
     padding=3,
 )
+
 extension_defaults = widget_defaults.copy()
+
 class MyVolume(widget.Volume):
     def _configure(self, qtile, bar):
         widget.Volume._configure(self, qtile, bar)

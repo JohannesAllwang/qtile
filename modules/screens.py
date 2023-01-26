@@ -33,7 +33,23 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.Clipboard(),
                 widget.CurrentLayoutIcon(scale=0.75),
+                widget.CPU(
+                    foregound='#5294e2'
+                    ),
+                widget.Sep(),
+                widget.NvidiaSensors(),
+                widget.Sep(),
+                widget.Memory(
+                    measure_mem='G',
+                    foreground='#e1acff'
+                    ),
+                widget.Sep(),
+                widget.Wlan(
+                    background='#9bd689',
+                    foreground="#74438f"),
+                # widget.ThermalSensor(),
                 widget.CheckUpdates(
                     update_interval=1800,
                     distro="Arch_yay",
@@ -74,15 +90,18 @@ screens = [
                        fontsize = 28,
                        foreground='#2f343f',
                        ),
+                widget.BatteryIcon(),
+                widget.Battery(
+                        foreground='#ff5555',
+                        ),
                 widget.TextBox(
                     text='',
                     mouse_callbacks= {
                         'Button1':
                         lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
-                    },
+                        },
                     foreground='#e39378'
                 )
-
             ],
             30,  # height in px
             background="#404552"  # background color
