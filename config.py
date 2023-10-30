@@ -17,6 +17,6 @@ focus_on_window_activation = "smart"
 wmname = "Qtile"
 widget_defaults = dict(
         font='Cascadia Code',
-        fontsize=16,
+        fontsize=25,
         padding=3
 )
