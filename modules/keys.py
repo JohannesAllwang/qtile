@@ -6,6 +6,7 @@ terminal = "wezterm"
 
 keys = [
     # Switch between windows
+    Key([mod], "b", lazy.spawn("firefox"), desc="open browser"),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
